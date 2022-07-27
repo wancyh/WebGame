@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="./js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="./js/a076d05399.js" crossorigin='anonymous'></script>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+    </style>
+
+    <title>猜拳對決遊戲</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header class="htop">
+        <h1>猜拳對決遊戲</h1>
+    </header>
+
+    <div id="ruleZone" class="rule">
+        <div id="rule1" class="rule1">
+            <p><i class='far fa-lightbulb' style='font-size:30px;color:rgb(177, 177, 33)'></i> 遊戲規則說明</p>
+        </div>
+
+        <div id="rule2" class="rule2">
+            
+           <ol>
+            <li>玩家首先與電腦猜拳，贏家取得攻擊權，按下Fight按鈕進行對決。</li>
+            <li>一回合有3次攻擊機會，在自己的攻擊回合與對手出拳方向相同以及成功躲過3次攻擊即得分。</li>
+            <li>玩家被攻擊成功以及攻擊回合內攻擊失敗會被扣除生命值。</li>
+            <li>攻擊回合結束，再進行猜拳決定下一回合的攻擊權歸屬。</li>
+            <li>玩家生命值歸零，遊戲結束。<br>計算雙分得分，得分數高者勝利。</li>
+
+            
+                  
+           </ol>
+
+
+        </div>
+        
+
+    </div>
+
+
+    <div id="infoZone" class="info">
+        <div id="lifeZone" class="lifeZe">
+            <h2><i class='fas fa-heart' style='font-size:38px;color:rgb(244, 112, 215)'></i> 剩餘生命值：</h2>
+            <div id="lifeP" class="lifeP">3</div>
+        </div>
+
+        <div id="atkZone" class="atkZe ">
+            <h2>當回已攻擊次數：</h2>
+            <div id="atkPt" class="atkPt">0</div>
+        </div>
+
+
+        <div id="score" class="scoreZone ">
+            <div id="userScZone" class="userSc">
+                <h2>玩家分數：</h2>
+                <div id="userSc" >0</div>
+
+            </div>
+
+            <div id="aiScZone" class="aiSc ">
+                <h2>對手分數：</h2>
+                <div id="aiSc">0</div>
+
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+    <div id="gameZone" class="gameZone gZ1">
+        <!--遊戲區域-->
+
+        <button id="turnGame" class="turnBtn">
+            Fight!
+        </button>
+        <button id="turnGame2" class="turnBtn">猜拳!</button>
+
+
+
+
+
+
+        <div id="game1">
+            <!--猜拳-->
+
+            <div id="game1Mes" class="message"> <!--顯示目前動作-->
+                遊戲開始，請出拳
+            </div>
+
+            <!--電腦出拳-->
+            <div id="aiCh1" class="aiMesge ">
+
+            </div>
+
+            <!--我方出拳-->
+            <div id="userCh1" class="optionbar">
+                <button id="scissors " class="game1btn btn btn-outline-danger" data-option="scissors">
+                    <i class='far fa-hand-scissors fa-4x'></i>
+                </button>
+                <button id="stone" class="game1btn btn btn-outline-primary" data-option="stone">
+                    <i class='far fa-hand-rock fa-4x'></i>
+                </button>
+                <button id="paper" class="game1btn btn btn-outline-success" data-option="paper">
+                    <i class='far fa-hand-paper fa-4x'></i>
+                </button>
+            </div>
+
+
+        </div>
+
+        <!--黑白猜區-->
+        <div id="game2" style="visibility:hidden ;">
+
+            <div id="aiCh2" class="aiMesge ">
+
+            </div>
+
+
+            <div id="userCh2" class="optionbar">
+                <button id="handUp " class="game2btn btn btn-outline-danger" data-option="handUp">
+                    <i class='far fa-hand-point-up fa-4x'></i>
+                </button>
+
+                <button id="handDown " class="game2btn btn btn-outline-primary" data-option="handDown">
+                    <i class='far fa-hand-point-down fa-4x'></i>
+                </button>
+
+                <button id="handLeft " class="game2btn btn btn-outline-success" data-option="handLeft">
+                    <i class='far fa-hand-point-left fa-4x'></i>
+                </button>
+
+                <button id="handRight " class="game2btn btn btn-outline-info" data-option="handRight">
+                    <i class='far fa-hand-point-right fa-4x'></i>
+                </button>
+
+            </div>
+        </div>
+
+        
+        <div id="gameEd" class="gameEd">
+            <p class="endFont">遊戲終了!</p>
+
+            <div id = "winZone" class="winZe">
+            
+
+            </div>
+    
+            <button id="reStart" class="reStart">開始新遊戲</button>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    
+    <script src="./js/game.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/game2.js"></script>
+
+    <footer class="foot">
+        <h3>Copyright © 2022 Cindy Wang. All rights reserved.</h3>
+    </footer>
+
+  </div>
+</body>
+
+
+
+</html>

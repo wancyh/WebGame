@@ -1,0 +1,396 @@
+body{
+
+   
+    height:100%;
+    width:100%;
+    
+    position: relative;
+    background-image:url('../img/back2.webp');
+    background-position: right top;
+    background-size: cover;
+    background-repeat:no-repeat;
+    
+   
+   
+}
+
+#wrapper{
+
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    padding-bottom: 145px;
+    box-sizing: border-box;
+
+}
+
+
+#gameZone{
+
+    width: 50%;
+    height: 600px;
+    margin: 0px auto;
+    
+    background-image: url('../img/classroom3.png');
+    background-size: cover;
+    background-color: #9C8273;
+    background-position: center top;
+    
+    background-repeat: no-repeat;
+    
+    position: relative;
+  
+   
+    
+    
+}
+
+
+.aiMesge{
+    
+    float: right;
+    top: 260px;
+    left: 560px;
+    width: 12%;
+    height: 85px;
+    border-radius: 10px;
+    border: palevioletred solid 3px;
+    background-color: rgba(256,256,256,0.5);
+    position: absolute;
+    
+}
+
+.optionbar{
+
+    float: left;
+    left: 20%;
+    top: 480px;
+    width: 65%;
+    height: 100px;
+    margin: 0px auto;
+    background-color: rgba(256,256,256,0.6);
+    border-radius: 30px;
+    border: palevioletred solid 3px;
+    position: absolute;
+}
+
+.game1btn{
+
+    top:10px;
+    left: 20px;
+    width: 25%;
+    height: 80px;
+    margin-left: 4%;
+    position: relative;
+    
+    
+}
+
+.message{
+
+    
+    left: 30%;
+    top: 400px;
+    width: 45%;
+    height: 60px;
+    font-family: 'cwtexyen','Exo 2', sans-serif;
+    position:absolute;
+    background-color: rgba(256,256,256,0.6);
+    border-radius: 20px;
+    border: darkblue dotted 3px;
+    font-size: 45px;
+    font-weight: bold;
+    color: darkslateblue;
+    text-align:center;
+    line-height: 60px; 
+    /* visibility: hidden; */
+    
+    
+}
+
+.optionbar2{
+
+    clear: both;
+    top: 480px;
+    width: 75%;
+    height: 100px;
+    margin: 0px auto;
+    background-color: rgba(256,256,256,0.6);
+    border-radius: 30px;
+    border: palevioletred solid 3px;
+    position: relative;
+}
+
+.game2btn{
+
+    top:10px;
+    left: 9px;
+    width: 20%;
+    height: 80px;
+    margin-left: 15px;
+    position: relative;
+    
+}
+
+.stopClick{
+
+    background-color: gray;
+}
+
+.turnBtn{
+    float:left;
+    visibility: hidden;
+    border: 3px maroon double;
+    border-radius: 50%;
+    top: 410px;
+    left: 650px;
+    width: 16%;
+    height: 73px;
+    font-size: 40px;
+    margin: 0px auto;
+    font-weight: bolder;
+    font-family: 'cwtexyen','Exo 2', sans-serif;
+    color: tomato;
+    background: linear-gradient(135deg, rgba(252,243,196,1) 1%,rgba(249,249,29,1) 100%);
+    position: absolute;
+
+}
+
+.turnBtn:hover{
+
+    font-size: 45px;
+    background: linear-gradient(135deg, rgba(249,249,29,1) 0%,rgba(252,243,196,1) 99%);
+}
+
+.info{
+   
+    
+    float: right; 
+    left: -3%;
+    width: 21%;
+    height: 500px;
+    margin: 0px auto;
+    text-align: center;
+    background-image: url('../img/infoback-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    position:relative;
+    margin-top: 3%;
+    padding-top:2%;
+
+
+}
+
+
+
+.lifeZe h2 {
+
+    color: yellow;
+    margin-bottom: 1px;
+}
+
+#lifeP{
+
+    color: white;
+    font-size: 45px;
+    font-family: 'Tomorrow', sans-serif;
+}
+   
+.atkZe h2{
+
+    color: yellow;
+    margin-bottom: 1px;
+}
+
+#atkPt{
+    color: white;
+    font-size: 45px;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.userSc h2{
+    color: DeepSkyBlue;
+    margin-bottom: 1px;
+
+}
+
+#userSc{
+    color: pink;
+    font-size: 45px;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.aiSc h2{
+    color: DeepSkyBlue;
+    margin-bottom: 0.1px;
+
+}
+
+#aiSc{
+    color: pink;
+    font-size: 45px;
+    font-family: 'Tomorrow', sans-serif;
+    
+}
+
+
+
+
+.gameEd{
+
+    visibility: hidden; 
+    width: 100%;
+    height: 600px;
+    margin: 0px auto;
+    
+    
+    background-color: rgba(256,256,256,0.8);
+    
+    
+    position: relative;
+
+
+}
+
+.endFont{
+
+    top:5%;
+    font-size: 120px;
+    font-weight: bolder;
+    font-family: 'cwtexyen','Exo 2', sans-serif;
+    left: 3%;
+    letter-spacing: 0.2em;
+    text-align: center;
+    position: relative;
+}
+
+.gameEd > p {
+    background: linear-gradient(135deg, rgba(244,48,104,1) 0%,rgba(244,173,85,1) 15%,rgba(242,244,95,1) 30%,rgba(123,219,72,1) 49%,rgba(88,150,201,1) 66%,rgba(88,150,201,1) 66%,rgba(153,110,209,1) 85%,rgba(153,110,209,1) 85%,rgba(226,125,232,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(244,48,104,1) 0%,rgba(244,173,85,1) 15%,rgba(242,244,95,1) 30%,rgba(123,219,72,1) 49%,rgba(88,150,201,1) 66%,rgba(88,150,201,1) 66%,rgba(153,110,209,1) 85%,rgba(153,110,209,1) 85%,rgba(226,125,232,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+
+}
+
+.winZe{
+    
+
+    letter-spacing: 0.25em;
+    font-size: 150px;
+    font-family: 'cwtexyen','Exo 2', sans-serif;
+    text-shadow: -1px -1px 1px #e11515,
+                 1px -1px 1px #e11515,
+                 -1px 1px 1px #e11515,
+                 1px 1px 1px #e11515;
+    font-weight: bold;
+    left: 5%;
+    text-align: center;
+    position: relative;    
+}
+
+.reStart{
+
+    width: 40%;
+    height: 50px;
+    line-height: 40px;
+    background-image: url('../img/reBtn3.png');
+    background-position: top left;
+    background-size: cover;
+    color: aliceblue;
+    border: 5px rgb(228, 132, 63) dashed; 
+    border-radius: 30px;
+    font-size: 30px;
+    font-family: 'cwtexyen','Exo 2', sans-serif;
+    position:absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.reStart:hover{
+    width: 50%;
+    height: 60px;
+    background-image: url('../img/reBtn4.png');
+    color: white;
+    background-position: top left;
+    background-size: cover;
+    border: 5px brown dashed;
+    
+    font-size: 40px;
+
+
+}
+
+
+.rule{
+   
+    float: left; 
+    bottom: 5%;
+    right: -1%;
+    width: 23%;
+    height: 490px;
+    margin: 0px auto;
+    margin-top: 5%;
+    border-radius: 3%;
+    background-image: url('../img/ruleback-2.png');
+    background-position: top ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    padding-top: 1%;
+    padding-left: 0.3%;
+    
+
+    
+    
+}
+
+.rule1{
+    
+    font-size: 35px;
+    color: rgb(92, 44, 10);
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.rule2{
+
+   
+    font-size: 20px;
+    color: rgb(180, 121, 79);
+    text-align: left;
+    margin-top: -3%;
+    margin-left: 6.6%;
+    margin-right: 9.5%;
+    font-weight: bold;
+    
+}
+
+.htop{
+    width: 100%;
+    
+    text-align: center;
+    background-color: rgba(52, 151, 227, 0.8);
+    color:white;
+}
+
+ .foot{
+    width: 100%;
+    height: 40px;
+    
+    text-align: center;
+    background-color: rgba(52, 151, 227, 0.8);
+    color:white;
+    position: absolute;
+    bottom: 0px;
+    
+    
+} 
+
+
+
+
